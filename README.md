@@ -68,10 +68,13 @@ Falcon/
 │   ├── test_misc.py
 │   ├── test_structures.py
 │   └── test_transforms.py
+├── notebooks/                          # Colab / Jupyter notebooks
+│   └── colab_train.ipynb              # Colab Pro training notebook (G4 GPU)
 ├── train.py                           # Training pipeline
 ├── eval_pretrained.py                 # Evaluation on benchmark datasets
 ├── setup.py                           # pip-installable package
 ├── requirements.txt                   # Python dependencies
+├── environment.yml                    # Conda environment (CUDA 12.1)
 ├── setup.cfg                          # pytest and metadata config
 ├── mypy.ini                           # Type checking config
 ├── .flake8                            # PEP8 linting config
@@ -104,6 +107,7 @@ python eval_pretrained.py \
 
 ### Training
 
+**Local:**
 ```bash
 python train.py \
     --dataset-images data/lagenda/images \
@@ -114,6 +118,10 @@ python train.py \
     --half --with-persons \
     --age-mode distribution
 ```
+
+**Colab Pro (G4 GPU — 100GB VRAM):**
+Open [`notebooks/colab_train.ipynb`](notebooks/colab_train.ipynb) in Google Colab,
+mount your Drive with the dataset, and run all cells.
 
 ### Tests
 
