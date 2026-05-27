@@ -1,0 +1,14 @@
+name: falcon
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.8
+  - pytorch>=2.0.0
+  - torchvision>=0.15.0
+  - pytorch-cuda=12.1
+  - pip
+  - pip:
+    - -r requirements.txt
